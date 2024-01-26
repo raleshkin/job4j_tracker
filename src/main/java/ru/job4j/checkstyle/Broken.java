@@ -10,10 +10,10 @@ public class Broken {
 
     private String name;
 
-    public void echo() {
+    public Broken() {
     }
 
-    public Broken() {
+    public void echo() {
     }
 
     public void method() {
