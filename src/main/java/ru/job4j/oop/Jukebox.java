@@ -3,15 +3,9 @@ package ru.job4j.oop;
 public class Jukebox {
     public void music(int position) {
         switch (position) {
-            case 1:
-                System.out.println("Пусть бегут неуклюже, пешеходы по лужам, а вода по асфальту рекой...");
-                break;
-            case 2:
-                System.out.println("Спят усталые игрушки, книжки спят. Одеяла и подушки ждут ребят...");
-                break;
-            default:
-                System.out.println("Песня не найдена");
-                break;
+            case 1 -> System.out.println("Пусть бегут неуклюже, пешеходы по лужам, а вода по асфальту рекой...");
+            case 2 -> System.out.println("Спят усталые игрушки, книжки спят. Одеяла и подушки ждут ребят...");
+            default -> System.out.println("Песня не найдена");
         }
     }
 
