@@ -16,9 +16,9 @@ public class Library {
             System.out.println(book.getName() + " - " + book.getCount());
         }
         Book temp = new Book(fightClub.getName(), fightClub.getCount());
-        books[0] = books[2];
-        books[2] = temp;
-        System.out.println("Swap fight club and three pigles;");
+        books[0] = books[3];
+        books[3] = temp;
+        System.out.println("Swap fight club and clear code");
         for (int i = 0; i < books.length; i++) {
             Book book = books[i];
             System.out.println(book.getName() + " - " + book.getCount());
