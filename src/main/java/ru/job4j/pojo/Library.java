@@ -15,10 +15,18 @@ public class Library {
             Book book = books[i];
             System.out.println(book.getName() + " - " + book.getCount());
         }
+        Book temp = new Book(fightClub.getName(), fightClub.getCount());
+        books[0] = books[2];
+        books[2] = temp;
+        System.out.println("Swap fight club and three pigles;");
+        for (int i = 0; i < books.length; i++) {
+            Book book = books[i];
+            System.out.println(book.getName() + " - " + book.getCount());
+        }
         System.out.println("Book with name \"Clean code\"");
         for (int i = 0; i < books.length; i++) {
             Book book = books[i];
-            if (book.getName() == "Clean code") {
+            if ("Clean code".equals(book.getName())) {
                 System.out.println(book.getName() + " - " + book.getCount());
             }
         }
