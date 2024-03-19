@@ -57,23 +57,23 @@ public class Tracker {
 
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
-        if (index == -1) {
-            return false;
-        } else {
+        boolean result = index != -1;
+        if (result) {
             items[index].setName(item.getName());
         }
-        return true;
+        return result;
     }
 
     public void delete(int id) {
         int index = indexOf(id);
-        if (index == -1) {
-            System.out.println("Program execution terminated");
-        } else {
+        boolean result = index != -1;
+        if (result) {
             items[index] = null;
             System.arraycopy(items, index + 1, items, index, size - index - 1);
             items[size - 1] = null;
             size--;
+        } else {
+            System.out.println("Program execution terminated");
         }
     }
 }
