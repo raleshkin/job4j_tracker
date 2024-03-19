@@ -22,8 +22,7 @@ public class Tracker {
                 dimensions++;
             }
         }
-        result = Arrays.copyOf(result, size);
-        return result;
+        return Arrays.copyOf(result, size);
     }
 
     public Item[] findByName(String key) {
