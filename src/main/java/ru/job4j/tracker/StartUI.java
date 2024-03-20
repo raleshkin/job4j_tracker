@@ -38,6 +38,13 @@ public class StartUI {
                 } else {
                     System.out.println("Ошибка замены");
                 }
+            } else if (select == 3) {
+                System.out.println("=== Удаление заявки ===");
+                System.out.print("Укажите id для удаления: ");
+                int id = Integer.parseInt(scanner.nextLine());
+                Item item = tracker.findById(id);
+                tracker.delete(id);
+                System.out.println(item != null ? "Заявка удалена успешно" : "Ошибка удаления заявки");
             } else if (select == 6) {
                 run = false;
             }
