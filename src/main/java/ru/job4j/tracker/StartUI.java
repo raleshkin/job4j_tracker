@@ -1,5 +1,6 @@
 package ru.job4j.tracker;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StartUI {
@@ -51,6 +52,19 @@ public class StartUI {
                 int id = Integer.parseInt(scanner.nextLine());
                 Item item = tracker.findById(id);
                 System.out.println(item != null ? item : "Заявки с id = " + id + " не существует");
+            } else if (select == 5) {
+                System.out.println("=== Поиск заявки по имени ===");
+                System.out.print("Введине имя заявки: ");
+                String name = scanner.nextLine();
+                Item[] items = tracker.findByName(name);
+                System.out.println(items.length);
+                if (items.length > 0) {
+                    for (Item item : items) {
+                        System.out.println(item);
+                    }
+                } else {
+                    System.out.println("Заявки с именем \"" + name + "\" не найдены");
+                }
             } else if (select == 6) {
                 run = false;
             }
