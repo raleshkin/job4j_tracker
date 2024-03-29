@@ -3,12 +3,12 @@ package ru.job4j.polymorhism;
 public class Bus implements Transport {
     @Override
     public void drive() {
-
+        System.out.println("Автобус тронулся!");
     }
 
     @Override
     public void passengers(int passengers) {
-
+        System.out.println("Количество пассажиров внутри: " + passengers);
     }
 
     @Override
