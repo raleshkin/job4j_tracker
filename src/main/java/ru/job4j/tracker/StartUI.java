@@ -49,14 +49,14 @@ public class StartUI {
 
     private static void findItemById(Input input, Tracker tracker) {
         System.out.println("=== Поиск заявки по id ===");
-        int id = Integer.parseInt(String.valueOf(input.askInt("Введите id заявки для поиска: ")));
+        int id = input.askInt("Введите id заявки для поиска: ");
         Item item = tracker.findById(id);
         System.out.println(item != null ? item : "Заявки с id = " + id + " не существует");
     }
 
     private static void deleteItem(Input input, Tracker tracker) {
         System.out.println("=== Удаление заявки ===");
-        int id = Integer.parseInt(String.valueOf(input.askInt("Укажите id для удаления: ")));
+        int id = input.askInt("Укажите id для удаления: ");
         Item item = tracker.findById(id);
         tracker.delete(id);
         System.out.println(item != null ? "Заявка удалена успешно" : "Ошибка удаления заявки");
@@ -64,7 +64,7 @@ public class StartUI {
 
     private static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== Изменение заявки ===");
-        int id = Integer.parseInt(String.valueOf(input.askInt("Введите id: ")));
+        int id = input.askInt("Введите id: ");
         String name = input.askStr("Введите имя новой заявки: ");
         Item item = new Item(name);
         if (tracker.replace(id, item)) {
