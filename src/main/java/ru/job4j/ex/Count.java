@@ -3,7 +3,7 @@ package ru.job4j.ex;
 public class Count {
     public static int add(int start, int finish) {
         if (start > finish) {
-            throw new IllegalArgumentException("Start shoud be less than finish.");
+            throw new IllegalArgumentException("Start should be less than finish.");
         }
         int result = 0;
         for (int i = start; i != finish; i++) {
