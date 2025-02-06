@@ -15,6 +15,6 @@ class FactorialTest {
                 () -> {
                     new Factorial().calc(-1);
                 });
-        assertThat(exceprion.getMessage()).isEqualTo("Number could not be less 0");
+        assertThat(exceprion.getMessage()).isEqualTo("Number could not be less 0.");
     }
 }
