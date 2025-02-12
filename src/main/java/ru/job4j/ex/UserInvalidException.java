@@ -1,7 +1,7 @@
 package ru.job4j.ex;
 
-public class UserIbvalidException extends UserNotFoundException {
-    public UserIbvalidException(String message) {
+public class UserInvalidException extends UserNotFoundException {
+    public UserInvalidException(String message) {
         super(message);
     }
 }
